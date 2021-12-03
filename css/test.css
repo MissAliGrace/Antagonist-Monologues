@@ -33,21 +33,121 @@ h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
+
+h3{
+    color: floralwhite;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
 p{
     color: seashell;
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     text-align: justify;
     padding-top: 250px;
-
 }
+
+div{
+
+    animation: glitch 1s linear infinite;
     
-h3{
-    color: seashell;
-    font-family: 'Courier New', Courier, monospace;
-    font-size:medium;}
-
-h4{
-    color: whitesmoke;
-    font-family: 'Courier New', Courier, monospace;
-}
+    }
+    
+    @keyframes glitch{
+    
+    2%,64%{
+    
+    transform: translate(2px,0) skew(0deg);
+    
+    }
+    
+    4%,60%{
+    
+    transform: translate(-2px,0) skew(0deg);
+    
+    }
+    
+    62%{
+    
+    transform: translate(0,0) skew(5deg);
+    
+    }
+    
+    }
+    
+    div:before,
+    
+    div:after{
+    
+    content: attr(title);
+    
+    position: absolute;
+    
+    left: 0;
+    
+    }
+    
+    div:before{
+    
+    animation: glitchTop 1s linear infinite;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    
+    }
+    
+    @keyframes glitchTop{
+    
+    2%,64%{
+    
+    transform: translate(2px,-2px);
+    
+    }
+    
+    4%,60%{
+    
+    transform: translate(-2px,2px);
+    
+    }
+    
+    62%{
+    
+    transform: translate(13px,-1px) skew(-13deg);
+    
+    }
+    
+    }
+    
+    div:after{
+    
+    animation: glitchBotom 1.5s linear infinite;
+    
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    
+    }
+    
+    @keyframes glitchBotom{
+    
+    2%,64%{
+    
+    transform: translate(-2px,0);
+    
+    }
+    
+    4%,60%{
+    
+    transform: translate(-2px,0);
+    
+    }
+    
+    62%{
+    
+    transform: translate(-22px,5px) skew(21deg);
+    
+    }
+    
+    }
