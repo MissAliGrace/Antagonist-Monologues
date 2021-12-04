@@ -6,7 +6,7 @@ body{
     
   
 main{
-        margin: 80px;
+        margin: 100px;
     }
 .to-top {
     position: fixed;
@@ -30,12 +30,12 @@ h1{
 }
 h2 {
     color: floralwhite;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
 h3{
-    color: floralwhite;
+    color: seashell;
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
 }
